@@ -2,7 +2,7 @@ public class Tree {
 
     public static int sizeOfTree(Tree tree) {
 
-        return -1;
+        return 0;
     }
 
     public static int heightOfTree(Tree tree) {
