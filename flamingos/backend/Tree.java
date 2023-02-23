@@ -1,14 +1,17 @@
 public class Tree {
 
+    private boolean empty;
+    private int treeSize, treeHeight;
+
     //Returns the size of a given tree
-    public static int sizeOfTree(Tree tree) {
+    public static int getSize(Tree tree) {
 
         return 0;
     }
 
 
     //Returns the height of a given tree
-    public static int heightOfTree(Tree tree) {
+    public static int getHeight(Tree tree) {
 
         return -1;
     }
