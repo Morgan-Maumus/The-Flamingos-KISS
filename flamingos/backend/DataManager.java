@@ -6,7 +6,8 @@ public class DataManager {
     private String description;
     
 
-    public class DataManager(node){
+    public class DataManager(node)
+    {
          title = node.title();
         description = node.description();   
     }
