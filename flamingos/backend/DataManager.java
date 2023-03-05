@@ -3,6 +3,7 @@ public class DataManager {
 
     //Skeleton of class that pushes and sets node data
     private String title;
+    //descrip
     private String description;
     
 
