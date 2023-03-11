@@ -1,5 +1,5 @@
 
-.App{
+.home{
   
 }
 
@@ -62,6 +62,8 @@
 /* Add button STYLES */
 .button-container{
   padding-right: 4vh;
+ 
+
 }
 .add-button{
   float: right;
@@ -69,5 +71,6 @@
   margin-top: 1vh;
 }
 /* Add button STYLES */
+
 
 

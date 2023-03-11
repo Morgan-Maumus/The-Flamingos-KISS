@@ -7,9 +7,20 @@ function Home(){
       }
       
     return (
-        <div onClick={newNode} className = "button-container"> 
-              <button className = "add-button"> Add </button>
+        <div className = 'home'>
+            
+                <div onClick={newNode} className = "button-container"> 
+                <button className = "add-button"> Add </button>
+                </div>
+            
+            
+            <div classname= 'nodes-container'>
+                Nodes will go here 
+            </div>
         </div>
+        
+
+
     )
 }
 export default Home
