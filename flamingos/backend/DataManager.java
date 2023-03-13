@@ -5,25 +5,26 @@ public class DataManager {
     private String title;
     //descrip
     private String description;
-    
+     
 
     public class DataManager(node)
     {
-         title = node.title();
+        title = node.title();
         description = node.description();   
     }
 
 // Gets node information
-    private getNode(node information)
+    private void getNode()
     {
 
-        return description;
+        System.out.println(title);
+        System.out.println(description);
 
     }
 //End node information
 
 // Modifies/sets node information
-    private setNode(node input information /* Most probably two args */)
+    private void setNode(node input information /* Most probably two args */)
     {
        title = nodeInputTitle;
        description = nodeInputdescription;
