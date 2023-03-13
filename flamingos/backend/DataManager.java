@@ -9,8 +9,8 @@ public class DataManager {
 
     public class DataManager(node)
     {
-        title = node.title();
-        description = node.description();   
+        title = node.getTitle();
+        description = node.getDescription();   
     }
 
 // Gets node information
