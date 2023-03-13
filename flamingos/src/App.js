@@ -1,10 +1,10 @@
 
 import './App.css';
 // import {BrowswerRouter, Routes, Route} from 'react-router-dom'
-import Home from './Pages/home'
+import Home from './Pages/Home'
 import Navigation from './Components/Navigation';
-import About from './Pages/about'
-import Signin from './Pages/signin'
+import About from './Pages/About'
+import Signin from './Pages/Signin'
 
 /* for now I put the home info in App but we will need use the pages 
 folder to create a navigation bar when we start coding the other pages */ 
