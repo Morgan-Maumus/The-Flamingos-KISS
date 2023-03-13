@@ -7,7 +7,7 @@ public class DataManager {
     private String description;
      
 
-    public class DataManager(node)
+    public class DataManager(Node node)
     {
         title = node.getTitle();
         description = node.getDescription();   
