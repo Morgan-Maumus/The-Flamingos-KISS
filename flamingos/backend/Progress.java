@@ -1,7 +1,7 @@
 public class Progress {
-    int tasks = 0;
-    int nodeNumber = 0;
-    int completedTasks = 0;
+    int tasks;
+    int nodeNumber;
+    int completedTasks;
 
     public static int totalTasksInTree(Tree tree){
         //returns total number of nodes in the tree
