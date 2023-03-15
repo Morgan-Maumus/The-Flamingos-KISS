@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function Node(props) {
   const [isHighlighted, setIsHighlighted] = useState(false);
   const [childNodes, setChildNodes] = useState([]);
+  const [isZoomed, setZoom] = useState(false);
 
   const handleAddChildNode = () => {
     const id = new Date().getTime();
@@ -14,7 +15,10 @@ function Node(props) {
   };
 
   const handleDoubleClick = () => {
-    setIsHighlighted(!isHighlighted);
+    
+      setIsHighlighted(!isHighlighted);
+    
+
   };
 
   const handleChildDelete = (id) => {
@@ -22,15 +26,28 @@ function Node(props) {
     setChildNodes(filteredNodes);
   };
 
+  const handleZoom = ()=>{
+    setZoom(!isZoomed);
+  }
+  // const handleZoomOut=()=>{
+  //   setZoom(isZoomed);
+  // }
+
   return (
-    <div className={`node ${isHighlighted ? 'highlight' : ''}`} onDoubleClick={handleDoubleClick}>
-      {/* <label htmlFor={`${props.id}-child-label`}>Node</label> */}
-      <div className="node-input-container">
-        <input type="text" id={`${props.id}-child-label`} placeholder="Enter a label" />
-        <input type="text" id={`${props.id}-child-label`} placeholder="Enter a label" />
+    // ${isZoomed ? 'zoomed' : ''}
+    // className={`node ${isHighlighted ? 'highlight' : ''}`} onDoubleClick={handleDoubleClick}
+    // onClick={handleZoomIn}
+    <div className="node " >  
+      <div className={`node-container ${isHighlighted ? 'highlight' : ''} ${isZoomed ? 'zoomed' : ''}` } onDoubleClick={handleDoubleClick }  onPointerEnter={handleZoom} onPointerLeave={handleZoom} >
+        <div className="column-container">
+          <input className={`node-input input-title ${isHighlighted ? 'highlight' : ''}`} type="text" id={`${props.id}-child-label`} placeholder="Title" />
+          <input className={`node-input input-descrip ${isHighlighted ? 'highlight' : ''}`} type="text"  placeholder="Description" />  {/* id={`${props.id}-child-label`} */}
+        </div>
+        <div className="column-container">
+          <button className="add-child" onClick={handleAddChildNode}>+</button>
+          <button className="delete-node" onClick={handleDeleteNode}>-</button>
+        </div>
       </div>
-      <button className="add-child" onClick={handleAddChildNode}>+</button>
-      <button className="delete-node" onClick={handleDeleteNode}>-</button>
       <div className="children">
         {childNodes.map(node => (
           <Node key={node.id} id={node.id} onDelete={handleChildDelete} />
