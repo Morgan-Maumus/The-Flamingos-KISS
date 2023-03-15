@@ -1,105 +1,85 @@
 import React, { useState } from 'react';
 
-function Node({ level, onDelete, onAddChild }) {
-  const [value1, setValue1] = useState('');
-  const [value2, setValue2] = useState('');
-  const [children, setChildren] = useState([]);
+function Node(props) {
+  const [isHighlighted, setIsHighlighted] = useState(false);
+  const [childNodes, setChildNodes] = useState([]);
 
-  const handleDelete = () => {
-    onDelete();
+  const handleAddChildNode = () => {
+    const id = new Date().getTime();
+    setChildNodes([...childNodes, { id }]);
   };
 
-  const handleAddChild = () => {
-    const newChildNode = { id: children.length, children: [] };
-    setChildren([...children, newChildNode]);
+  const handleDeleteNode = () => {
+    props.onDelete(props.id);
   };
 
-  const handleDeleteChild = childId => {
-    const filteredChildren = children.filter(child => child.id !== childId);
-    setChildren(filteredChildren);
+  const handleDoubleClick = () => {
+    setIsHighlighted(!isHighlighted);
   };
 
-  const renderChild = child => {
-    return (
-      <div key={child.id}>
-        <Node
-          level={level + 1}
-          onDelete={() => handleDeleteChild(child.id)}
-          onAddChild={() => handleAddChildToChild(child.id)}
-        />
-        {child.children && child.children.map(renderChild)}
-      </div>
-    );
-  };
-
-  const handleAddChildToChild = childId => {
-    const newChildNode = { id: children.length, children: [] };
-    const newChildren = children.map(child => {
-      if (child.id === childId) {
-        child.children.push(newChildNode);
-      }
-      return child;
-    });
-    setChildren(newChildren);
+  const handleChildDelete = (id) => {
+    const filteredNodes = childNodes.filter(node => node.id !== id);
+    setChildNodes(filteredNodes);
   };
 
   return (
-    <div style={{ marginLeft: level * 20 }}>
-      <input type="text" value={value1} onChange={e => setValue1(e.target.value)} />
-      <input type="text" value={value2} onChange={e => setValue2(e.target.value)} />
-      <button onClick={handleAddChild}>Add Child</button>
-      <button onClick={handleDelete}>Delete</button>
-      {children && children.map(renderChild)}
+    <div className={`node ${isHighlighted ? 'highlight' : ''}`} onDoubleClick={handleDoubleClick}>
+      {/* <label htmlFor={`${props.id}-child-label`}>Node</label> */}
+      <div className="node-input-container">
+        <input type="text" id={`${props.id}-child-label`} placeholder="Enter a label" />
+        <input type="text" id={`${props.id}-child-label`} placeholder="Enter a label" />
+      </div>
+      <button className="add-child" onClick={handleAddChildNode}>+</button>
+      <button className="delete-node" onClick={handleDeleteNode}>-</button>
+      <div className="children">
+        {childNodes.map(node => (
+          <Node key={node.id} id={node.id} onDelete={handleChildDelete} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Tree() {
+  const [rootNodes, setRootNodes] = useState([]);
+
+  const handleAddRootNode = () => {
+    const id = new Date().getTime();
+    setRootNodes([...rootNodes, { id }]);
+  };
+
+  const handleRootDelete = (id) => {
+    const filteredNodes = rootNodes.filter(node => node.id !== id);
+    setRootNodes(filteredNodes);
+  };
+
+  return (
+    
+    <div className="container">
+      <div className="add-button-container">
+      <button className="add-tree" onClick={handleAddRootNode}>+</button>
+      </div>
+      {rootNodes.map(node => (
+        <div key={node.id} className="root">
+          {/* <label htmlFor="root-label">Title</label> */}
+          {/* <input type="text" id="root-label" placeholder="Enter a title" />
+          <button className="add-child" onClick={() => setRootNodes([...rootNodes, { id: new Date().getTime() }])}>+</button>
+          <button className="delete-node" onClick={() => handleRootDelete(node.id)}>-</button> */}
+          <div className="children">
+            <Node id={node.id} onDelete={handleRootDelete} />
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
 
 function Home(){
-    const [nodes, setNodes] = useState([]);
-
-  const handleAddNode = () => {
-    const newNode = { id: nodes.length, children: [] };
-    setNodes([...nodes, newNode]);
-  };
-
-  const handleDeleteNode = nodeId => {
-    const filteredNodes = nodes.filter(node => node.id !== nodeId);
-    setNodes(filteredNodes);
-  };
-
-  const renderNode = node => {
-    return (
-      <div key={node.id} style={{ display: 'inline-block', marginLeft: '20px' }}>
-        {/* <input placeholder='Tree title'> </input> */}
-        <h3>Tree {node.id + 1}</h3>
-        <Node
-          level={0}
-          onDelete={() => handleDeleteNode(node.id)}
-          onAddChild={() => handleAddChildToNode(node.id)}
-        />
-        {node.children && node.children.map(childNode => renderNode(childNode))}
-      </div>
-    );
-  };
-
-  const handleAddChildToNode = nodeId => {
-    const newChildNode = { id: nodes.length, children: [] };
-    const newNodes = nodes.map(node => {
-      if (node.id === nodeId) {
-        node.children.push(newChildNode);
-      }
-      return node;
-    });
-    setNodes(newNodes);
-  };
-
+    
   return (
     <div>
-        <div className = 'button-container'>
-            <button className="add-button"onClick={handleAddNode}>Add Tree</button>
-      </div>
-      {nodes.map(renderNode)}
-    </div>
+    <Tree />
+  </div>
   );
 }
 export default Home;
