@@ -202,7 +202,6 @@
       margin-bottom: 10px;
     }
   }
-  
 /* HOME STYLES */
 
 
@@ -287,14 +286,14 @@
 /* ADD TREE BUTTON STYLES */
 
 /* MEET THE TEAM STYLES */
-
 /*three columns side by side*/
-.columnPics{
+.columnImg{
   float: left;
   width: 33.3%;
   margin-bottom: 16px;
   padding:  0 8px;
 }
+
 /*Display colums below each other instead of side by side for small screens*/
 @media screen and (max-width: 650px){
   .columnPics{
@@ -302,13 +301,23 @@
     display: block;
   }
 }
-/*padding in container*/
-.containerPic{
+
+/*padding in container for pictures,*/
+.containerImg{
   padding: 0 16px;
 }
 
+/*image autosizing*/
+.responsiveImg{
+  width: 100%;
+  max-width: 1020px;
+  height: auto;
+}
+
+/**/
+
 /* KISS BG LOGO*/
-.kiss {
+.kissHeader {
   width: 268px;
   height: 129px;
   opacity: 43%;
@@ -319,16 +328,7 @@
   font-size: 120px;
   text-align: center;
 }
-.andSymbol {
-  width: 41px;
-  height: 65px;
-  color: #333333;
-  font-family: "Coming Soon";
-  font-weight: 400;
-  font-size: 60px;
-  line-height: 1.3;
-  text-align: center;
-}
+
 /*.1f9a9-icon-3 {
     width: 347px;
     height: 355px;
@@ -370,7 +370,8 @@
   text-align: center;
 }
 
-.appDescription {
+/*about the app text info/ can also be used for text on pics*/
+.textDescription {
   width: 309px;
   height: 62px;
   color: #333333;
