@@ -18,8 +18,6 @@ function Node(props) {
     
       setIsHighlighted(!isHighlighted);
     
-  
-
   };
 
   const handleChildDelete = (id) => {
@@ -42,14 +40,16 @@ function Node(props) {
     // onClick={handleZoomIn}
     <div className="node " >  
       <div className={`node-container ${isHighlighted ? 'highlight' : ''} ${isZoomed ? 'zoomed' : ''}` } onDoubleClick={handleDoubleClick }  onClick={handleZoomIn} onPointerLeave={handleZoomOut} >
+        <div className= "node-buttons">
+            <button className="add-child" onClick={handleAddChildNode}>+</button>
+            <div className= "middle-button"></div>
+            <button className="delete-node" onClick={handleDeleteNode}>-</button>
+        </div>
         <div className="column-container">
           <input className={`node-input input-title ${isHighlighted ? 'highlight' : ''}`} type="text" id={`${props.id}-child-label`} placeholder="Title" />
           <input className={`node-input input-descrip ${isHighlighted ? 'highlight' : ''}`} type="text"  placeholder="Description" />  {/* id={`${props.id}-child-label`} */}
         </div>
-        <div className="column-container">
-          <button className="add-child" onClick={handleAddChildNode}>+</button>
-          <button className="delete-node" onClick={handleDeleteNode}>-</button>
-        </div>
+        
       </div>
       <div className="children">
         {childNodes.map(node => (
