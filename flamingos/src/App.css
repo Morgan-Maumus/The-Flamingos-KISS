@@ -258,7 +258,6 @@
       padding-bottom:1vh;
   }
 }
-
 /* NAV BAR STYLES */
 
 /* ADD TREE BUTTON STYLES */
@@ -266,6 +265,7 @@
   padding-right: 3vh;
 
 }
+
 .add-tree{
   float: right;
   display: block;
