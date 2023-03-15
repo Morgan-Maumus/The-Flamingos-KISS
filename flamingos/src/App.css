@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
   }
+
+
   /* HOME STYLES */
   .column-container{
     display: flex;
@@ -196,7 +198,9 @@
     }
   }
   
-   /* HOME STYLES */
+/* HOME STYLES */
+
+
 
 /* NAV BAR STYLES */
 .nav-bar{
@@ -252,7 +256,9 @@
 
 /* NAV BAR STYLES */
 
-/* Add button STYLES */
+
+
+/* ADD TREE BUTTON STYLES */
 .add-button-container{
   padding-right: 3vh;
 
@@ -273,9 +279,9 @@
 }
 
 .add-tree:hover {
-  background-color: #bc6ea5;
+  background-color:#da929e;
 }
-/* Add button STYLES */
+/* ADD TREE BUTTON STYLES */
 
 
 
