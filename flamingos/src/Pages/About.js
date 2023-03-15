@@ -2,14 +2,14 @@ import React from 'react';
 
 
 function About(){
-    
-    
-      
+
+
+
     return (
-       <div className = 'about'>
-            
+                <div className = 'about'>
+
             <p>Hello</p>
-       </div>
+        </div>
     )
 }
-export default About
+export default About;
