@@ -2,13 +2,13 @@
     box-sizing: border-box;
   }
 
-
   /* HOME STYLES */
   .column-container{
     display: flex;
     flex-direction:column;
     align-items: center;
   }
+
   .container {
     max-width: 100%;
     margin: 0 auto;
@@ -26,7 +26,6 @@
     align-items: center;
     margin-bottom: 40px;
   }
-  
 
   .node-input{
     background-color:#f5f5f5;
@@ -44,6 +43,7 @@
     min-height: 40px;;
     max-height: 80px;
   }
+
   .input-descrip.highlight{
     min-height: 40px;;
     max-height: 80px;
@@ -52,6 +52,7 @@
   .input-title{
     margin-top:5px;
   }
+
   .node { 
     display: flex;
     flex-direction: row;
@@ -66,10 +67,11 @@
     margin-right:0px;
     
   }
+
   .node-container{
     display: flex;
     flex-direction: column;
-    align-items: top; 
+    align-items: center;
     border-radius: 20px;
     padding: 5px;
     padding-top:0;
@@ -84,6 +86,7 @@
   .node-container:hover {
     box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
   }
+
   .node-container.highlight  {
     background-color: #97ae98;
     border-color:#87a38d;
@@ -115,7 +118,6 @@
       -webkit-transition:0.7s ease all; 
       -moz-transition:0.7s ease all;
   }
-    
 
   .node-input.highlight{
     background-color:#f5f5f5;
@@ -146,6 +148,7 @@
     align-items: center;
     flex:2;
   }
+
   .delete-node {
     background-color: #f2d3d7;
     margin:2px;
@@ -164,8 +167,7 @@
     padding-left: 2px;
     padding-right:4px;
   }
-  
-  
+
   @media screen and (max-width: 600px) {
     .container {
       padding: 10px;
@@ -204,7 +206,6 @@
 /* HOME STYLES */
 
 
-
 /* NAV BAR STYLES */
 .nav-bar{
   width:100%;
@@ -216,7 +217,6 @@
     padding-bottom:2vh;
     background-color: #d7818f;
 }
-
 
 .nav-links {
 	padding-left: 2vh;
@@ -236,10 +236,12 @@
   flex:1;
      
 }
+
 .nav-center{
   align-items: center;
   
 }
+
 .nav-right{
   float:right;
   flex:1;
@@ -258,8 +260,6 @@
 }
 
 /* NAV BAR STYLES */
-
-
 
 /* ADD TREE BUTTON STYLES */
 .add-button-container{
@@ -287,8 +287,28 @@
 /* ADD TREE BUTTON STYLES */
 
 /* MEET THE TEAM STYLES */
+
+/*three columns side by side*/
+.columnPics{
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding:  0 8px;
+}
+/*Display colums below each other instead of side by side for small screens*/
+@media screen and (max-width: 650px){
+  .columnPics{
+    width: 100%;
+    display: block;
+  }
+}
+/*padding in container*/
+.containerPic{
+  padding: 0 16px;
+}
+
 /* KISS BG LOGO*/
-.k-i-s-s- {
+.kiss {
   width: 268px;
   height: 129px;
   opacity: 43%;
@@ -299,7 +319,7 @@
   font-size: 120px;
   text-align: center;
 }
-.and-symbol {
+.andSymbol {
   width: 41px;
   height: 65px;
   color: #333333;
@@ -309,8 +329,15 @@
   line-height: 1.3;
   text-align: center;
 }
+/*.1f9a9-icon-3 {
+    width: 347px;
+    height: 355px;
+    transform: rotate(180deg);
+    opacity: 7%;
+    background: #333333;
+  }   FLAMINGO BG IMAGE SPECS*/
 
-.image-placeholder {
+.imagePlaceholder {
   width: 172px;
   height: 155px;
   background: #f5f5f5;
@@ -320,7 +347,7 @@
 }
 
 /* Meet text in bg logo*/
-.meet-the-flamingos- {
+.meetTheFlamingos {
   width: 270px;
   height: 56px;
   opacity: 83%;
@@ -332,7 +359,7 @@
 }
 
 /*KISS text in bg logo*/
-.keep-it-simple-stupid- {
+.keepItSimpleStupid {
   width: 303px;
   height: 56px;
   opacity: 83%;
@@ -343,7 +370,7 @@
   text-align: center;
 }
 
-.center-app-description {
+.appDescription {
   width: 309px;
   height: 62px;
   color: #333333;
@@ -354,61 +381,52 @@
   text-align: center;
 }
 
-/*.1f9a9-icon-3 {
-    width: 347px;
-    height: 355px;
-    transform: rotate(180deg);
-    opacity: 7%;
-    background: #333333;
-  }   FLAMINGO BG IMAGE SPECS*/
-
 /* connector designs */
-.connector-5 {
+.connectorImg6 {
   width: 205px;
   height: 449px;
 }
-.connector-11 {
+.connectorImg5 {
   width: 44px;
   height: 403px;
 }
-.connector-6 {
+.connectorImg3 {
   width: 97px;
   height: 128px;
 }
-.connector-1 {
+.connectorMirrorPink {
   width: 158px;
   height: 129px;
 }
-.connector-8 {
+.connectorImg2 {
   width: 29px;
   height: 191px;
 }
-/*Pink connector*/
-.connector-9 {
+.connectorPink {
   width: 147px;
   height: 135px;
 }
-.connector-3 {
+.connectorBotKISS {
   width: 347px;
   height: 88px;
 }
-.connector-7 {
+.connectorImg4 {
   width: 192px;
   height: 449px;
 }
-.connector-10 {
+.connectorImg1 {
   width: 74px;
   height: 128px;
 }
-.connector-2 {
+.connectorTopKISS {
   width: 347px;
   height: 66px;
 }
-.connector-12 {
+.connectorBotMTF {
   width: 314px;
   height: 93px;
 }
-.connector-4 {
+.connectorTopMTF {
   width: 314px;
   height: 69px;
 }
