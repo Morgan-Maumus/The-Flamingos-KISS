@@ -1,17 +1,20 @@
 import React from 'react'
+import {Link} from "react-router-dom";
+
 
 function Navigation(){
+    
     return (
         <div className = "nav-bar"> 
             
             <div className="nav-left">
-                <a className="nav-links "  href ="">About</a>
+                <Link className="nav-links nav-left"  to ="./About.js">About</Link>
             </div>
             <div className="nav-center">
-                <a className="nav-links" classname= "center-padding" href ="">Home</a>
+                <Link className="nav-links nav-center" classname= "center-padding" to ="./">Home</Link>
             </div>
             <div className="nav-right">    
-                <a className="nav-links nav-right"href ="">Log In</a>
+                <Link className="nav-links nav-right"to ="./Signin.js">Log In</Link>
             </div>
         </div>
     )
