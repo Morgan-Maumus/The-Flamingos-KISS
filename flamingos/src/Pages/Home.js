@@ -18,6 +18,7 @@ function Node(props) {
     
       setIsHighlighted(!isHighlighted);
     
+  
 
   };
 
@@ -26,19 +27,21 @@ function Node(props) {
     setChildNodes(filteredNodes);
   };
 
-  const handleZoom = ()=>{
-    setZoom(!isZoomed);
+  const handleZoomIn = ()=>{
+    setZoom(true);
+    
+    
   }
-  // const handleZoomOut=()=>{
-  //   setZoom(isZoomed);
-  // }
+  const handleZoomOut=()=>{
+    setZoom(false);
+  }
 
   return (
     // ${isZoomed ? 'zoomed' : ''}
     // className={`node ${isHighlighted ? 'highlight' : ''}`} onDoubleClick={handleDoubleClick}
     // onClick={handleZoomIn}
     <div className="node " >  
-      <div className={`node-container ${isHighlighted ? 'highlight' : ''} ${isZoomed ? 'zoomed' : ''}` } onDoubleClick={handleDoubleClick }  onPointerEnter={handleZoom} onPointerLeave={handleZoom} >
+      <div className={`node-container ${isHighlighted ? 'highlight' : ''} ${isZoomed ? 'zoomed' : ''}` } onDoubleClick={handleDoubleClick }  onClick={handleZoomIn} onPointerLeave={handleZoomOut} >
         <div className="column-container">
           <input className={`node-input input-title ${isHighlighted ? 'highlight' : ''}`} type="text" id={`${props.id}-child-label`} placeholder="Title" />
           <input className={`node-input input-descrip ${isHighlighted ? 'highlight' : ''}`} type="text"  placeholder="Description" />  {/* id={`${props.id}-child-label`} */}

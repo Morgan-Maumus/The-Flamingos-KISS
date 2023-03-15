@@ -83,7 +83,7 @@
     
   }
 
-  .node-container.zoomed{
+  /* .node-container.zoomed{
       -moz-transform: scale(1); 
       -webkit-transform: scale(1); 
       transform: scale(1); 
@@ -97,9 +97,9 @@
     -webkit-transform: scale(1.5); 
     transform: scale(1.5);
     z-index: 1;
-  }
+  } */
 
-  /* .node-container.zoomed{ 
+  .node-container.zoomed{ 
     -moz-transform: scale(1.5); 
     -webkit-transform: scale(1.5); 
     transform: scale(1.5);
@@ -107,7 +107,7 @@
     transition:0.7s ease all; 
       -webkit-transition:0.7s ease all; 
       -moz-transition:0.7s ease all;
-  } */
+  }
     
 
 
