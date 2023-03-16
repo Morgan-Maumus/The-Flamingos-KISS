@@ -1,12 +1,15 @@
 import React from 'react';
+import {Stack} from "react-bootstrap";
 
 
 function About(){
 
     return (
-        <h1>
-        hello
-        </h1>
+        <div className='kissHeader'>
+        K.I.S.S.
+            <div className='logoText'>Meet the Team!</div>
+        </div>
+
     )
 }
 export default About;
