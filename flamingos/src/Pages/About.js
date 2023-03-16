@@ -1,15 +1,29 @@
 import React from 'react';
-import {Stack} from "react-bootstrap";
+
+function Header(){
+    return(
+        <div className='kissHeader'>
+            K.I.S.S.
+        <div className='logoText'><u>Meet the Keep It Simple, Stupid Team!</u>
+            </div>
+        </div>
+    )
+}
+
+function idCards(){
+    return(
+        <div className='row'>
+            <div className='columnImg'>
 
 
+            </div>
+        </div>
+    )
+}
 function About(){
 
     return (
-        <div className='kissHeader'>
-        K.I.S.S.
-            <div className='logoText'>Meet the Team!</div>
-        </div>
-
+<Header/>
     )
 }
 export default About;
