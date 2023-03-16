@@ -21,7 +21,7 @@ public class Progress {
         return nodeNumber;
     }
     public static int totalTasksCompleted(Tree tree){
-        //returns total number of tasks completed 
+       
         return completedTasks;
     }
     public static int tasksCompletedForTree(Tree tree){
