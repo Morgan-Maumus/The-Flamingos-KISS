@@ -1,25 +1,34 @@
 import React from 'react';
+import '../App.css';
 
-function Header(){
-    return(
-        <div className='kissHeader'>
-            K.I.S.S.
-        <div className='logoText'><u>Meet the Keep It Simple, Stupid Team!</u>
+function Header() {
+    return (
+        <div className='container' id='kHead'>
+            <div className='kissHeader'> K.I.S.S.
+                <div className='logoText'>
+                    <u>Meet the Keep It Simple, Stupid Team!</u>
+                </div>
             </div>
         </div>
-    );
+    )
 }
 
 function Body(){
     return(
-        <Header/>
+        <div className='row'>
+            <div className='columnImg'>
+                <div className='card' width='100%'>
+                    <div className='container'>
+                        <p>Jack</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
-
 function About(){
-
     return (
-        <Body/>
-    )
+    <Header/>
+            )
 }
 export default About;
