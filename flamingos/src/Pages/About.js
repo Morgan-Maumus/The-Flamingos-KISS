@@ -12,7 +12,6 @@ function Header() {
         </div>
     )
 }
-
 function Body(){
     return(
         <div className='row'>
@@ -28,7 +27,10 @@ function Body(){
 }
 function About(){
     return (
-    <Header/>
+        <>
+            <Header/>
+            <Body/>
+        </>
             )
 }
 export default About;
