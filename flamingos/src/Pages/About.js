@@ -7,23 +7,19 @@ function Header(){
         <div className='logoText'><u>Meet the Keep It Simple, Stupid Team!</u>
             </div>
         </div>
-    )
+    );
 }
 
-function idCards(){
+function Body(){
     return(
-        <div className='row'>
-            <div className='columnImg'>
-
-
-            </div>
-        </div>
+        <Header/>
     )
 }
+
 function About(){
 
     return (
-<Header/>
+        <Body/>
     )
 }
 export default About;

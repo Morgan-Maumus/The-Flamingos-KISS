@@ -64,7 +64,7 @@
     padding-left: 20px;
     padding-right:10px;
     
-    margin-right:0px;
+    margin-right:0;
     
   }
 
@@ -286,41 +286,42 @@
 /* ADD TREE BUTTON STYLES */
 
 
+/* ABOUT THE TEAM STYLES */
 
-/* MEET THE TEAM STYLES */
+
 /*three columns side by side*/
-.columnImg{
+.columnImg {
   float: left;
   width: 33.3%;
   margin-bottom: 16px;
-  padding:  0 8px;
-}
-/*card-like display*/
-.card {
-  box-shadow: 0 4px 8px 0 #a1b1a1;
+  padding: 0 8px;
 }
 
-/*Display columns below each other instead of side by side for small screens*/
-@media screen and (max-width: 650px){
-  .columnImg{
+/*remove extra l&r margins, due to pad in columns*/
+.row {margin: 0 -5px}
+
+/*clear floats after columns*/
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+
+}
+/*Styling the card-like display*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+/* responsive columns for small screens*/
+@media screen and(max-width: 600px) {
+  .columnImg {
     width: 100%;
     display: block;
+    margin-bottom: 20px;
   }
 }
-
-/*padding in container for pictures,*/
-.containerImgPad{
-  padding: 0 16px;
-}
-
-/*image autosizing*/
-.responsiveImg{
-  width: 100%;
-  max-width: 1020px;
-  height: auto;
-}
-
-/**/
 
 /* text in header*/
 .logoText {
