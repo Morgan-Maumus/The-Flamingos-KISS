@@ -1,7 +1,9 @@
 public class Progress {
-    int tasks;
-    int nodeNumber;
-    int completedTasks;
+    private int tasks;
+    private int nodeNumber;
+    private int completedTasks;
+    private int completedNodes;
+    private ArrayList<Tree> nodeTasks = new ArrayList<Tree>();
 
     public static int totalTasksInTree(Tree tree){
         //returns total number of nodes in the tree
@@ -9,10 +11,12 @@ public class Progress {
     }
 
     public static void incrementTaskCount(Tree tree){
+        nodeTasks.add(tree);
         tasks++;
     }
 
     public static void decrementTaskCount(Tree tree){
+        nodeTasks.remove(tree);
         tasks--;
     }
     public static int getTreeProgress(Tree tree){
@@ -20,7 +24,15 @@ public class Progress {
         return nodeNumber;
     }
     public static int totalTasksCompleted(Tree tree){
-        //returns total number of tasks completed 
+       
+        for(int i = 0; i < nodeTasks.length(); i++ )
+        {
+            if(nodeTasks(i).isComplete == true)
+            {
+                completedTasks++;
+            }
+        }
+        
         return completedTasks;
     }
     public static int tasksCompletedForTree(Tree tree){
@@ -37,6 +49,6 @@ public class Progress {
     }
     public static void completeTask(Node node){
         //marks a node complete
-        completedTasks++;        
+        completedNodes++;        
     }
 }
