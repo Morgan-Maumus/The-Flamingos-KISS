@@ -212,8 +212,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top:2vh;
-    padding-bottom:2vh;
+    padding-top:1vh;
+    padding-bottom:1vh;
     background-color: #d7818f;
 }
 
@@ -229,24 +229,34 @@
     
 }
 
-.nav-left{
-  
-  float:left;
-  flex:1;
-     
+.nav-left {
+  width: 12%;
+  float: left;
+  flex: 1;
+}
+#logo {
+  width: 100%;
 }
 
-.nav-center{
+.nav-center {
+  width: 2.5%;
   align-items: center;
-  
+}
+#home {
+  float: center;
+  width: 100%;
 }
 
-.nav-right{
-  float:right;
-  flex:1;
-  
-    
+.nav-right {
+  width: 12%;
+  float: right;
+  flex: 1;
 }
+#signin {
+  float: right;
+  width: 100%;
+}
+
 @media(max-width:60vh){
   .nav-links {
       padding: .8vh;
