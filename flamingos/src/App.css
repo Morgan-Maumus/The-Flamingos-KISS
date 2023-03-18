@@ -379,3 +379,105 @@
 }
 
 /* MEET THE TEAM STYLES */
+
+/* ACCOUNT PAGE STYLES */
+/* Some HTML & CSS taken from https://www.youtube.com/watch?v=p1GmFCGuVjw for education/personal purposes */
+.signin-wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: #f2d3d7;
+  border: 13px solid #d7818f;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  
+}
+
+.signin-wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.form-box h2 {
+  font-size: 2em;
+  color: #333333;
+  text-align: center;
+}
+
+.signin-wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  font-size: 2em;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #333333;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #333333;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #333333;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  width: 8%;
+  right: 8px;
+  font-size: 1.2em;
+  color: #333333;
+  margin-top: 15px;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #d7818f;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #333333;
+  font-weight: 500;
+}
