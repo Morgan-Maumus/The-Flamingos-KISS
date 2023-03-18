@@ -1,5 +1,5 @@
-public class DataManager {
-
+import java.lang.*;
+public class DataManager() {
 
     //Skeleton of class that pushes and sets node data
     private String title;
