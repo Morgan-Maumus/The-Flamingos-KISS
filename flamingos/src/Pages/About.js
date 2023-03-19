@@ -19,6 +19,15 @@ function Header() {
 function Body(){
     return(
         <>
+            <div className='containTxt'>
+                <p className='aboutDescription'>
+                    <h2> About K.I.S.S.!</h2>
+                    With this application we intend to promote an ease of work-life balance
+                    by offering students the opportunity to simplify their tasks. Our application
+                    takes complicated generalized tasks and makes them into stupid simple tasks,
+                    for stupidly simple solving.
+                </p>
+            </div>
             <div className='containCard'>
                 <div className='row'>
                 <div className='columnImg'>

@@ -306,6 +306,7 @@ for educational/personal purposes*/
   background-position: center;
   padding: 20px;
   position: relative;
+  margin-bottom: 80px;
 }
 
 /* text in header*/
@@ -337,15 +338,14 @@ for educational/personal purposes*/
 .containCard{
   width: 100%;
   padding: 10px;
-  margin-top: 80px;
+  margin-top: 5px;
 }
-/*remove extra l&r margins, due to pad in columns*/
 
 /*ID card details container*/
 .containTxt{
   width: 100%;
   height: auto;
-  padding: 1px;
+  padding: 10px;
 }
 
 /*three columns side by side*/
@@ -355,7 +355,7 @@ for educational/personal purposes*/
   padding: 0 8px;
 }
 
-/*clear floats after columns & rows*/
+/*clear floats after columns*/
 .row::after{
   content: "";
   display: table;
@@ -367,7 +367,7 @@ for educational/personal purposes*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   background-color: #f1f1f1;
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 /* responsive columns for small screens*/
@@ -385,7 +385,7 @@ for educational/personal purposes*/
   color: #333333;
   font-family: "Georama";
   font-weight: 400;
-  font-size: 16px;
+  font-size: 26px;
   line-height: 1.3;
   text-align: center;
 }
