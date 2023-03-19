@@ -272,7 +272,6 @@
 /* ADD TREE BUTTON STYLES */
 .add-button-container{
   padding-right: 3vh;
-
 }
 
 .add-tree{
@@ -297,18 +296,28 @@
 
 
 /* ABOUT THE TEAM STYLES */
+/*HTML/CSS taken https://www.w3schools.com/howto/howto_css_about_page.asp
+for educational/personal purposes*/
+
+/*Header Container*/
+.containHeader{
+  width: 100%;
+  height: auto;
+  background-position: center;
+  padding: 20px;
+  position: relative;
+}
 
 /* text in header*/
 .logoText {
   width: 100%;
-  height: auto;
   color: #333333;
   font-family:"Monotype Corsiva";
   font-weight: 500;
   font-size: 40px;
   text-align: center;
   position: absolute;
-  bottom:20px;
+  top: 80px;
 }
 
 /* header */
@@ -316,53 +325,56 @@
   width: 100%;
   height: auto;
   color: #f9a7b1;
-  opacity: 76%;
+  opacity:40%;
   font-family: "Freehand", serif;
   font-weight: 700;
   font-size: 120px;
   text-align: center;
   position: absolute;
-  top: auto;
 }
 
+/*Cards container*/
+.containCard{
+  width: 100%;
+  padding: 10px;
+  margin-top: 80px;
+}
+/*remove extra l&r margins, due to pad in columns*/
+
+/*ID card details container*/
+.containTxt{
+  width: 100%;
+  height: auto;
+  padding: 1px;
+}
 
 /*three columns side by side*/
 .columnImg {
   float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
+  width: 33.33%;
   padding: 0 8px;
-
 }
 
-/*remove extra l&r margins, due to pad in columns*/
-.row {
-  margin: 300px;
-  height: 40px;
-  width: auto;
-
-}
-
-/*clear floats after columns*/
-.row:after{
+/*clear floats after columns & rows*/
+.row::after{
   content: "";
   display: table;
   clear: both;
-
 }
+
 /*Styling the card-like display*/
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
+  margin-top: 200px;
 }
+
 /* responsive columns for small screens*/
 @media screen and(max-width: 600px) {
-  .columnImg {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
+ .columnImg {
+  width: 100%;
+  display: block;
   }
 }
 
@@ -377,8 +389,8 @@
   line-height: 1.3;
   text-align: center;
 }
+/* ABOUT THE TEAM STYLES */
 
-/* MEET THE TEAM STYLES */
 
 /* ACCOUNT PAGE STYLES */
 /* Some HTML & CSS taken from https://www.youtube.com/watch?v=p1GmFCGuVjw for education/personal purposes */

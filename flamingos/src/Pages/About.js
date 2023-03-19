@@ -10,71 +10,76 @@ import Phil from '../Images/Phil.jpg';
 
 function Header() {
     return (
-        <>
-            <div className='container'>
-                <div className='bgImg'/>
-                <div className='kissHeader'> K.I.S.S.
-                    <div className='logoText'>
-                        <u>Meet the Keep It Simple, Stupid Team!</u>
-                    </div>
-                </div>
-            </div>
-        </>
+        <div className='containHeader'>
+            <div className='kissHeader'>K.I.S.S. </div>
+            <div className='logoText'> <u>Meet the Keep It Simple, Stupid Team!</u> </div>
+        </div>
     )
 }
 function Body(){
     return(
         <>
-            <div className='row'>
+            <div className='containCard'>
+                <div className='row'>
                 <div className='columnImg'>
-                    <div className='card' width='100%'>
+                    <div className='card'>
                         <img src= { jackjack } alt='Jack' width='100%' height='auto'/>
-                        <div className='container'>
+                        <div className='containTxt'>
                             <p>Jack</p>
                         </div>
                     </div>
                 </div>
+
                 <div className='columnImg'>
-                    <div className='card' width='100%'>
+                    <div className='card'>
                         <img src= { lana } alt='Lana' width='100%'/>
-                        <div className='container'>
+                        <div className='containTxt'>
                             <p>Lana</p>
                         </div>
                     </div>
                 </div>
+
                 <div className='columnImg'>
-                    <div className='card' width='100%'>
+                    <div className='card'>
                         <img src= { Shelbs } alt='Shelby' width='100%' height='auto'/>
-                        <div className='container'>
+                        <div className='containTxt'>
                             <p>Shelby</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='row'>
-                <div className='columnImg'>
-                    <div className='card' width='100%'>
-                        <img src= { sav } alt='Savannah' width='100%' height='auto'/>
-                        <div className='container'>
+            </div>
+
+            <div className='containCard'>
+                <div className='row'>
+
+                    <div className='columnImg'>
+                        <div className='card'>
+                            <img src= { sav } alt='Savannah' width='100%' height='auto'/>
+                            <div className='containTxt'>
                             <p>Savannah</p>
                         </div>
+                        </div>
                     </div>
-                </div>
-                <div className='columnImg'>
-                    <div className='card' width='100%'>
-                        <img src= { nat } alt='Nat' width='100%' height='auto'/>
-                        <div className='container'>
+
+                    <div className='columnImg'>
+                        <div className='card'>
+                            <img src= { nat } alt='Nat' width='100%' height='auto'/>
+                            <div className='containTxt'>
                             <p>Nat</p>
                         </div>
-                    </div>
-                </div>
-                <div className='columnImg'>
-                    <div className='card' width='100%'>
-                        <img src= { Phil } alt='Phil' width='100%' height='auto'/>
-                        <div className='container'>
-                            <p>Phil</p>
                         </div>
                     </div>
+
+                    <div className='columnImg'>
+                        <div className='card'>
+                            <img src= { Phil } alt='Phil' width='100%' height='auto'/>
+                            <div className='containTxt'>
+                            <p>Phil</p>
+                        </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </>
