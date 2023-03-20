@@ -32,15 +32,21 @@ function Login() {
             </div>
         </div>
     )
-
 }
-
+function Header() {
+    return (
+        <div className='containHeader'>
+            <div className='kissHeader'><i>K.I.S.S.</i></div>
+        </div>
+    )
+}
 
 
 function Signin(){
     
     return (
         <>
+            <Header/>
           <Login/>  
         </>
        
