@@ -3,6 +3,25 @@
   }
 
   /* HOME STYLES */
+  .progress{
+    justify-content: center;
+    display: flex;
+    margin-bottom:6px;
+  }
+  .progress-bar{
+    background-color: #f2d3d7;
+    border-radius: 6px;
+    height:26px;
+    width:200px;
+    padding:4.3px 4.3px;
+    
+  }
+  .progress-fill{
+    background-color: #da929e;
+    border-radius: 4px;
+    height:17px;
+    width:50%;
+  }
   .column-container{
     display: flex;
     flex-direction:column;
@@ -16,8 +35,9 @@
   }
   
   .root {
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 60px;
+    
   }
   
   .tree {
@@ -25,6 +45,8 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 40px;
+    padding-top: 50px;
+    width:fit-content;
   }
 
   .node-input{
@@ -58,14 +80,13 @@
     flex-direction: row;
     align-items: center;
     background-color: #f2d3d7;
-    /* border: 1px solid #d7818f; */
     border-radius: 10px;
     padding:15px;
     padding-left: 20px;
     padding-right:10px;
-    
     margin-right:0;
-    
+    /* border: 1px solid #d7818f;
+    margin:3px; */
   }
 
   .node-container{
@@ -133,6 +154,7 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    
   }
   
   .add-child {
