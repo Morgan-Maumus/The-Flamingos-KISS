@@ -11,23 +11,23 @@ import Phil from '../Images/Phil.jpg';
 function Header() {
     return (
         <div className='containHeader'>
-            <div className='kissHeader'>K.I.S.S. </div>
-            <div className='logoText'> <u>Meet the Keep It Simple, Stupid Team!</u> </div>
+            <div className='kissHeader'><i>K.I.S.S.</i></div>
+            <div className='logoText'><u>Meet the Keep It Simple, Stupid Team!</u> </div>
         </div>
     )
 }
 function Body(){
     return(
         <>
-            <div className='containTxt'>
-                <p className='aboutDescription'>
-                    <h2> About K.I.S.S.!</h2>
-                    With this application we intend to promote an ease of work-life balance
-                    by offering students the opportunity to simplify their tasks. Our application
-                    takes complicated generalized tasks and makes them into stupid simple tasks,
-                    for stupidly simple solving.
-                </p>
-            </div>
+            <p className='aboutDescription'>
+                <h2>What is K.I.S.S.?</h2>
+                KISS is an acronym for the phrase Keep It Simple, Stupid. It was taught to us by Professor Patti Aymond
+                that then inspired us to create this web application. With this application we intend to promote an ease of work-life balance
+                by offering students the opportunity to simplify their tasks. Our application
+                takes complicated generalized tasks and makes them into stupid simple tasks,
+                for stupidly simple solving.
+            </p>
+
             <div className='containCard'>
                 <div className='row'>
                 <div className='columnImg'>
