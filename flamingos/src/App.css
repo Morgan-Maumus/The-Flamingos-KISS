@@ -3,6 +3,25 @@
   }
 
   /* HOME STYLES */
+  .progress{
+    justify-content: center;
+    display: flex;
+    margin-bottom:6px;
+  }
+  .progress-bar{
+    background-color: #f2d3d7;
+    border-radius: 6px;
+    height:26px;
+    width:200px;
+    padding:4.3px 4.3px;
+    
+  }
+  .progress-fill{
+    background-color: #da929e;
+    border-radius: 4px;
+    height:17px;
+    width:50%;
+  }
   .column-container{
     display: flex;
     flex-direction:column;
@@ -16,8 +35,9 @@
   }
   
   .root {
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 60px;
+    
   }
   
   .tree {
@@ -25,6 +45,8 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 40px;
+    padding-top: 50px;
+    width:fit-content;
   }
 
   .node-input{
@@ -58,14 +80,13 @@
     flex-direction: row;
     align-items: center;
     background-color: #f2d3d7;
-    /* border: 1px solid #d7818f; */
     border-radius: 10px;
     padding:15px;
     padding-left: 20px;
     padding-right:10px;
-    
-    margin-right:0px;
-    
+    margin-right:0;
+    /* border: 1px solid #d7818f;
+    margin:3px; */
   }
 
   .node-container{
@@ -133,6 +154,7 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    
   }
   
   .add-child {
@@ -212,8 +234,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top:2vh;
-    padding-bottom:2vh;
+    padding-top:1vh;
+    padding-bottom:1vh;
     background-color: #d7818f;
 }
 
@@ -229,24 +251,34 @@
     
 }
 
-.nav-left{
-  
-  float:left;
-  flex:1;
-     
+.nav-left {
+  width: 12%;
+  float: left;
+  flex: 1;
+}
+#logo {
+  width: 100%;
 }
 
-.nav-center{
+.nav-center {
+  width: 2.5%;
   align-items: center;
-  
+}
+#home {
+  float: center;
+  width: 100%;
 }
 
-.nav-right{
-  float:right;
-  flex:1;
-  
-    
+.nav-right {
+  width: 12%;
+  float: right;
+  flex: 1;
 }
+#signin {
+  float: right;
+  width: 100%;
+}
+
 @media(max-width:60vh){
   .nav-links {
       padding: .8vh;
@@ -262,7 +294,6 @@
 /* ADD TREE BUTTON STYLES */
 .add-button-container{
   padding-right: 3vh;
-
 }
 
 .add-tree{
@@ -286,53 +317,29 @@
 /* ADD TREE BUTTON STYLES */
 
 
+/* ABOUT THE TEAM STYLES */
+/*HTML/CSS taken https://www.w3schools.com/howto/howto_css_about_page.asp
+for educational/personal purposes*/
 
-/* MEET THE TEAM STYLES */
-/*three columns side by side*/
-.columnImg{
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding:  0 8px;
-}
-/*card-like display*/
-.card {
-  box-shadow: 0 4px 8px 0 #a1b1a1;
-}
-
-/*Display columns below each other instead of side by side for small screens*/
-@media screen and (max-width: 650px){
-  .columnImg{
-    width: 100%;
-    display: block;
-  }
-}
-
-/*padding in container for pictures,*/
-.containerImgPad{
-  padding: 0 16px;
-}
-
-/*image autosizing*/
-.responsiveImg{
+/*Header Container*/
+.containHeader{
   width: 100%;
-  max-width: 1020px;
   height: auto;
+  background-position: center;
+  padding-bottom: 20px;
+  position: relative;
 }
-
-/**/
 
 /* text in header*/
 .logoText {
   width: 100%;
-  height: auto;
   color: #333333;
   font-family:"Monotype Corsiva";
   font-weight: 500;
   font-size: 40px;
   text-align: center;
   position: absolute;
-  bottom:20px;
+  top: 80px;
 }
 
 /* header */
@@ -340,22 +347,57 @@
   width: 100%;
   height: auto;
   color: #f9a7b1;
-  opacity: 76%;
+  opacity:40%;
   font-family: "Freehand", serif;
   font-weight: 700;
   font-size: 120px;
   text-align: center;
   position: absolute;
-  top: auto;
 }
 
-/*.1f9a9-icon-3 {
-    width: 347px;
-    height: 355px;
-    transform: rotate(180deg);
-    opacity: 7%;
-    background: #333333;
-  }   FLAMINGO BG IMAGE SPECS*/
+/*Cards container*/
+.containCard{
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+/*ID card details container*/
+.containTxt{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+/*three columns side by side*/
+.columnImg {
+  float: left;
+  width: 33.33%;
+  padding: 0 8px;
+}
+
+/*clear floats after columns*/
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Styling the card-like display*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top: 50px;
+}
+
+/* responsive columns for small screens*/
+@media screen and(max-width: 600px) {
+ .columnImg {
+  width: 100%;
+  display: block;
+  }
+}
 
 /*about the app text info/ can also be used for text on pics*/
 .aboutDescription {
@@ -364,9 +406,112 @@
   color: #333333;
   font-family: "Georama";
   font-weight: 400;
-  font-size: 16px;
+  font-size: 26px;
   line-height: 1.3;
+  text-align: center;
+  margin-top: 150px;
+}
+/* ABOUT THE TEAM STYLES */
+
+
+/* ACCOUNT PAGE STYLES */
+/* Some HTML & CSS taken from https://www.youtube.com/watch?v=p1GmFCGuVjw for education/personal purposes */
+.signin-wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: #f2d3d7;
+  border: 13px solid #d7818f;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  
+}
+
+.signin-wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.form-box h2 {
+  font-size: 2em;
+  color: #333333;
   text-align: center;
 }
 
-/* MEET THE TEAM STYLES */
+.signin-wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  font-size: 2em;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #333333;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #333333;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #333333;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  width: 8%;
+  right: 8px;
+  font-size: 1.2em;
+  color: #333333;
+  margin-top: 15px;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #d7818f;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #333333;
+  font-weight: 500;
+}

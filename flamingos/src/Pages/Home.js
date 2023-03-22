@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
 
+
+
 function Node(props) {
+  
   const [isHighlighted, setIsHighlighted] = useState(false);
   const [childNodes, setChildNodes] = useState([]);
   const [isZoomed, setZoom] = useState(false);
+  
 
   const handleAddChildNode = () => {
     const id = new Date().getTime();
     setChildNodes([...childNodes, { id }]);
+    
   };
 
   const handleDeleteNode = () => {
     props.onDelete(props.id);
+    
   };
 
   const handleDoubleClick = () => {
-    
       setIsHighlighted(!isHighlighted);
     
   };
@@ -34,10 +39,9 @@ function Node(props) {
     setZoom(false);
   }
 
+  
+
   return (
-    // ${isZoomed ? 'zoomed' : ''}
-    // className={`node ${isHighlighted ? 'highlight' : ''}`} onDoubleClick={handleDoubleClick}
-    // onClick={handleZoomIn}
     <div className="node " >  
       <div className={`node-container ${isHighlighted ? 'highlight' : ''} ${isZoomed ? 'zoomed' : ''}` } onDoubleClick={handleDoubleClick }  onClick={handleZoomIn} onPointerLeave={handleZoomOut} >
         <div className= "node-buttons">
@@ -81,11 +85,13 @@ function Tree() {
       </div>
       {rootNodes.map(node => (
         <div key={node.id} className="root">
-          {/* <label htmlFor="root-label">Title</label> */}
-          {/* <input type="text" id="root-label" placeholder="Enter a title" />
-          <button className="add-child" onClick={() => setRootNodes([...rootNodes, { id: new Date().getTime() }])}>+</button>
-          <button className="delete-node" onClick={() => handleRootDelete(node.id)}>-</button> */}
-          <div className="children">
+          <div className="progress" > 
+            <div className="progress-bar">
+              <div className="progress-fill" style={{width: 50+'%'}}>
+              </div>
+            </div>
+          </div>
+          <div className="children"> 
             <Node id={node.id} onDelete={handleRootDelete} />
           </div>
         </div>
