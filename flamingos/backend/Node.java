@@ -106,7 +106,7 @@ public class Node {
     //returns whether node is complete
     public boolean isCompleted()
     {
-        boolean completeStatus = completedTask;
+        boolean completeStatus = isComplete;
         return completeStatus;
     }
     
