@@ -1,4 +1,4 @@
-
+import React from "react";
 import './App.css';
 import Home from './Pages/Home'
 import Navigation from './Components/Navigation';
@@ -7,7 +7,13 @@ import Signin from './Pages/Signin'
 import {Route, Routes} from "react-router-dom";
 
 function App() {
+    const [data, setData] = React.useState(null);
 
+    React.useEffect(() => {
+        fetch("/api")
+            .then((res) => res.json())
+            .then((data) => setData(data.message));
+    }, []);
   return (
     <>
       <Navigation/>
