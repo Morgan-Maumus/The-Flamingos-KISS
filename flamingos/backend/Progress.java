@@ -8,10 +8,10 @@ public class Progress {
     private int completedNodes;
     private double percentComplete;
     private ArrayList<Tree> nodeTasks = new ArrayList<Tree>();
-    
+
     public Progress()
     {
-        
+
     }
 
     //Tracks tasks in tree
@@ -30,14 +30,14 @@ public class Progress {
         nodeTasks.remove(tree);
         tasks--;
     }
-    
+
     //Tracks progress in tree task completion
     public static int getTreeProgress(Tree tree){
         int nodeNumber = (tree.getSize() - completedTasks);
         return nodeNumber;
     }
     public static int totalTasksCompleted(Tree tree){
-       
+
         for(int i = 0; i < nodeTasks.length(); i++ )
         {
             if(nodeTasks(i).isComplete == true)
@@ -45,38 +45,38 @@ public class Progress {
                 completedTasks++;
             }
         }
-        
+
         return completedTasks;
     }
-    
+
     //Returns number of tasks completed
-    public static int tasksCompletedForTree(Tree tree){ 
+    public static int tasksCompletedForTree(Tree tree){
         completedTasks2 = tree.getTasks();
         return completedTasks2++;
-        }
-    
+    }
+
     //returns tasks to be done for tree
     public static int tasksRemainingForTree(Tree tree){
         remainder = tree.getSize() - completedTasks;
         return remainder;
     }
-    
+
     //sets percent value of task bar completed
     public static void updateProgressBar(Tree tree){
         //updates progress bar for a tree
-        percentComplete = (completedTasks2/tasks) * 100; 
+        percentComplete = (completedTasks2/tasks) * 100;
     }
-    
+
     //Returns Progress Percentage Value
     public double getProgressBarStatus(Tree tree)
     {
         return percentComplete;
     }
-    
+
     //Marks a task as complete
     public static void completeTask(Node node){
         //marks a node complete
         node.setComplete();
-        completedNodes++;        
+        completedNodes++;
     }
 }
