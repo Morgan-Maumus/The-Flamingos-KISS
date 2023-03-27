@@ -6,6 +6,7 @@ public class Node {
     //constructor for the node
         //if the node is completed, add 1 to the number of nodes completed
         int nodesCompleted = 0;
+        boolean isComplete;
         for(i=0; i<nodeChildren.length; i++){
          nodesCompleted ++;
         }
@@ -95,4 +96,18 @@ public class Node {
     public static Node getParent(Node node){
         return nodeParent;
     }
+    
+    //Sets a node as complete
+    public void setComplete()
+    {
+        isComplete = true;
+    }
+    
+    //returns whether node is complete
+    public boolean isCompleted()
+    {
+        boolean completeStatus = completedTask;
+        return completeStatus;
+    }
+    
 }
