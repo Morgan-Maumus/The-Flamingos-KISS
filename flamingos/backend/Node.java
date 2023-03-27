@@ -23,7 +23,7 @@ public class Node {
     }
 
     //variable that contains the node's children
-    private LinkedList nodeChildren = new LinkedList<String>(); 
+    private static ArrayList nodeChildren = new ArrayList<String>(); 
     for(i=0; i<node.length; i++){
         nodeChildren.add(node(i+1));
     }
@@ -53,8 +53,15 @@ public class Node {
     }
 
     //sets the title of the node
-    public static void setTitle(Node node){
-
+    public static String setTitle(Node node){
+        String title;
+        for(int i=0; i<nodeChildren.length; i++){
+            if (node = nodeChildren(i)){
+                title = getParent(nodeChildren(i));
+                
+            }
+        }
+        return title;
     }
 
     //returns the node's description
@@ -65,11 +72,11 @@ public class Node {
     //sets the nodes description
     public static void setDescription(Node node){
     //sets the node's description
-
+        getDescription(node);
     }
 
     //returns the node's children
-    public static Array getChildren(Node node){
+    public static ArrayList getChildren(Node node){
         return nodeChildren;
     }
 
@@ -101,13 +108,4 @@ public class Node {
     public void setComplete()
     {
         isComplete = true;
-    }
-    
-    //returns whether node is complete
-    public boolean isCompleted()
-    {
-        boolean completeStatus = isComplete;
-        return completeStatus;
-    }
-    
 }
