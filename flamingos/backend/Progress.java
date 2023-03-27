@@ -68,6 +68,7 @@ public class Progress {
     //Marks a task as complete
     public static void completeTask(Node node){
         //marks a node complete
+        node.setComplete();
         completedNodes++;        
     }
 }
