@@ -1,0 +1,19 @@
+{
+  "name": "THE-FLAMINGOS-KISS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "cd flamingos && npm install && npm run build"
+  },
+  "engines": {
+    "node": "19.7.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
