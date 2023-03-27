@@ -1,24 +1,16 @@
-
+import React from "react";
 import './App.css';
-import Home from './Pages/Home'
-import Navigation from './Components/Navigation';
-import About from './Pages/About'
-import Signin from './Pages/Signin'
-import {Route, Routes} from "react-router-dom";
-
+import Navigation from "./Components/Navigation";
 function App() {
+React.useEffect(() => {
+    fetch("/api")
+        .then((res) => res.json())
+
+}, []);
 
   return (
     <>
-      <Navigation/>
-      <div>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/About" element={<About/>}/>
-          <Route path="/Signin" element={<Signin/>}/>
-        </Routes>
-      </div>
-    
+    <Navigation/>
     </>
    
   );
