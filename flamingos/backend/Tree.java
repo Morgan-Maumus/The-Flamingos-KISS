@@ -72,15 +72,12 @@ public class Tree {
         thisTree.clear();
         return;
     }
-    
-    //Gets number of completed tasks in tree
-    public int getTasks()
-    {
+
+    // Gets number of completed tasks in tree
+    public int getTasks(ArrayList<Node> thisTree) {
         int taskTracker = 0;
-        for(int i = 0; i = thisTree.size(); i++)
-        {
-            if(thisTree.get(i).isComplete == true)
-            {
+        for (int i = 0; i == thisTree.size(); i++) {
+            if (thisTree.get(i).isComplete == true) {
                 taskTracker++;
             }
         }
