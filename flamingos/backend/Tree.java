@@ -4,10 +4,17 @@ import java.util.Objects;
 public class Tree {
 
     // actually implemented as an array list instead of a tree
-
+    
+    private ArrayList<Node> thisTree = new ArrayList<>();
+    
     public Tree() {
-        ArrayList<Node> thisTree = new ArrayList<>();
+        thisTree = new ArrayList<>();
         thisTree.clear(); // guarantee an empty tree to begin w/
+    }
+    //Allows functions to get the node array list from the tree class (Progress class needs this trust me I've tested it we're clear) 
+    public ArrayList<Node> getTree()
+    {
+        return thisTree;
     }
 
     // Returns the size of a given tree
