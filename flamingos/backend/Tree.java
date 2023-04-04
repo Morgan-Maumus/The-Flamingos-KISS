@@ -84,7 +84,7 @@ public class Tree {
     public int getTasks(ArrayList<Node> thisTree) {
         int taskTracker = 0;
         for (int i = 0; i == thisTree.size(); i++) {
-            if (thisTree.get(i).isComplete == true) {
+            if (thisTree.get(i).isComplete) {
                 taskTracker++;
             }
         }
