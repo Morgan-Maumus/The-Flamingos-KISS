@@ -90,5 +90,9 @@ public class Tree {
         }
         return taskTracker;
     }
+    public static void main(String[] args) {
+// create obj
+        //do things
+    }
 
 }

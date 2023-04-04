@@ -44,7 +44,7 @@ public class Progress {
         {
             
             for(int j = 0; j < (nodeTasks.get(i)).getTree().size(); j++)
-            if((nodeTasks.get(i)).getTree().get(j).isComplete == true)
+                if((nodeTasks.get(i)).getTree().get(j).isComplete)
             {
                 completedTasks++;
             }
