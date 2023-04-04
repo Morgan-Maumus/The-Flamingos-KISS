@@ -83,6 +83,7 @@ public class Tree {
     // Gets number of completed tasks in tree
     public int getTasks(ArrayList<Node> thisTree) {
         int taskTracker = 0;
+        //For all nodes in a tree, checks if complete. Returns number of completed tasks in tree
         for (int i = 0; i < thisTree.size(); i++) {
             if (thisTree.get(i).isComplete) {
                 taskTracker++;
