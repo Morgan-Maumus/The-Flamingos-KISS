@@ -45,7 +45,7 @@ public class Tree {
         }
         for (int i = 0; i < thisTree.size(); i++) {
             Node tempNode = thisTree.get(i);
-            if (Objects.equals(tempNode.getTitle(tempNode), inNode.getTitle(inNode)))
+            if (Objects.equals(tempNode.getTitle(), inNode.getTitle()))
             // if(tempNode.getUID(tempNode)= inNode.getTitle(inNode))
             {
                 thisTree.remove(i); // if found delete element for index i
@@ -65,7 +65,7 @@ public class Tree {
         }
         for (int i = 0; i < thisTree.size(); i++) {
             Node tempNode = thisTree.get(i);
-            if (Objects.equals(tempNode.getTitle(tempNode), inNode.getTitle(inNode)))
+            if (Objects.equals(tempNode.getTitle(), inNode.getTitle()))
             // if(tempNode.getUID(tempNode)= inNode.getTitle(inNode))
             {
                 return i; // if found, return index into arrayList of search item
