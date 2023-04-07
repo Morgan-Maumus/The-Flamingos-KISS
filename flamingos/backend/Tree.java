@@ -1,3 +1,4 @@
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -92,8 +93,11 @@ public class Tree {
         return taskTracker;
     }
     public static void main(String[] args) {
-// create obj
-        //do things
+        Tree taskNew = new Tree();
+        Progress task = new Progress();
+        ArrayList<Node> newTree = new ArrayList<>();
+        System.out.println(taskNew.getTasks(newTree));
+        System.out.println(task.getTreeProgress(taskNew));
     }
 
 }
