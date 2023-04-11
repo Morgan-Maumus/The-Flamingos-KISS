@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://kissflamingo.herokuapp.com/",
+  "homepage": "https://kissflam.herokuapp.com/",
   "scripts": {
     "start": "node server/index.js",
     "build": "cd flamingos && npm install && npm run build"
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "mongodb": "^5.2.0",
     "node": "^19.8.1",
     "node.js": "^0.0.1-security"
   }
