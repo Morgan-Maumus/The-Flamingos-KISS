@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://kissflam.herokuapp.com/",
+  "homepage": "https://flamkiss.herokuapp.com/",
   "scripts": {
     "start": "node server/index.js",
     "build": "cd flamingos && npm install && npm run build"
